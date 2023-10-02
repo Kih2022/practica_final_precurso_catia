@@ -164,7 +164,7 @@ header nav.container .menu .active {
 
     header nav .menu {
         padding: 0;
-        /*porque no quiero qu el menu tenga paddin, y que este alineado arriva del todo*/
+        /*porque no quiero qu el menu tenga padding, y que este alineado arriba del todo*/
         /* */
 
     }
@@ -208,3 +208,7 @@ header nav.container .menu .active {
 
 
 }
+
+/*footer*/
+
+/*en el about pagina que tenemos que hacer sera lo mismo que en esta*/
