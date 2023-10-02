@@ -170,10 +170,16 @@ header nav.container .menu .active {
     }
 
     header nav.container .menu a {
-        padding: 0;
+        padding: 0rem calc(var(--space) *1.25)0 0)
     }
 
-    en los dos siguentes estamos mejorando el nav para verlo en computadora como se muestra en la web header nav.container .menu {
+    .hero h1 {
+        max-width: 43.75rem;
+    }
+
+
+    /*en los dos siguentes estamos mejorando el nav para verlo en computadora como se muestra en la web*/
+    header nav.container .menu {
         width: 80%;
         order: 2;
         /*que se cambien las posiciones*/
@@ -216,6 +222,33 @@ footer .container {
 }
 
 /*final del footer*/
+
+/*todos los estilos que no sean desktop o tables, se ponen fuera de las mediaqueries. el moviles. la primera mediaquery es desktop y la segunda tablet*/
+
+/*inicio here*/
+.hero {
+    background-image: url(../images/fondo.png);
+    height: 80vh;
+    /*poruqe quiero que ocupe el 80% de la altura*/
+    background-size: cover;
+    /*para que la imagen se expanda al 100% de su orcontenedor (no haria falta poner el repeat*/
+    display: flex;
+    /*para centrar el texto tanto en la vertical como en la horizontal*/
+    justify-content: center;
+    align-items: center;
+    /*on estos tres alineo al centro la imagen*/
+    padding: 1.25em;
+
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.4em;
+    /*el interliniado que por defecto es 1 em*/
+}
+
+/*final hero*/
 
 
 
