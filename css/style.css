@@ -205,29 +205,20 @@ header nav.container .menu .active {
     }
 }
 
-footer .container {
-    padding: 0rem 1.25rem;
-    color: var(--secondaryColor);
-}
-
-
-
-
-
-
-
 /*footer*/
 
 /*en el about pagina que tenemos que hacer sera lo mismo que en esta*/
 /*esto mantiene el margen todo el rato, pero a partir de 1400 cambia para que mantenga. hemos hecho estoporque el vava al abrir se pegaba a la derecha al abrir la pantalla*/
 
-
-
-
-
-
+footer .container {
+    padding: 0rem 1.25rem;
+    color: var(--secondaryColor);
+}
 
 /*final del footer*/
+
+
+
 @media(width> 87.5em) {
     header .containeer {
         padding: 0rem;
