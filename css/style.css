@@ -1,5 +1,5 @@
 @import url(reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Rasa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rasa:wght@300;500&display=swap');
 
 
 /*variables que van a afectar a todo la pagina todas las medidas generales tienen que estar en rem*/
@@ -121,6 +121,7 @@ header nav.container .menu a {
     display: inline-block;
     /*porque sile pongo bloque el elemento pasa de linea a bloque. al ponerle esto se sigue compartiemndo como elemento en linea pero tiene atributos de bloque por eso el menu igue estando centrado*/
     padding: 0.625rem 0rem;
+    /*para separar los botones de la lista*/
     /*sale por defectoi em al cambiarlo, pero luego debemos cambiarlo de nuevo con rems*/
 }
 
@@ -128,14 +129,82 @@ header nav.container .menu a {
 /*aqui hemos tenido que ir al html para poner una clase a este enlace para que el index aparezca en negrita*/
 
 header nav.container .menu .active {
-    font-weight: 300;
+    font-weight: 500;
     /* le ponemos 300 porque la fuente bold que me he traido es la 300. mirar en :root*/
 }
 
-
-
-/*para separar los botones de la lista*/
-
-
-
 /*fin del header*/
+
+/*mediaqueries*/
+/*aqui cambiare,os todo lo que cambie de mobil a la siguiente medida de laptop por ejemplo*/
+
+
+
+@media(width> 48em) {
+    header nav.container #btnMenu {
+        /*cambiarlo siempre de px a rem. mediaquereis siempre en rem*/
+        display: none;
+        /*para que no lo quite y tampoco use el espacio*/
+    }
+
+    header nav.container .menu {
+        width: 50%;
+    }
+
+    header nav.container .menu li {
+        text-align: left;
+        /*parar que desaparezca el menu de la derecha como lo hace al cambiar de dispositivo*/
+        display: inline-block;
+        /*se va hacia abajo porque tiene el width del k50% por eso le ponemos este disblay para que se ponga en linea y se suba arriba.
+         el li es un elemento en bloque, por eso le ponemos el displlay este para que siga siendo un bloque pero se ponga en linea*/
+
+    }
+
+    /*para que los botos logo y el primero de la lista esten alineados como en la foto una vez que cambiamos de vista a desktop, le quitamos todos los paddings. y esto lo muestro en los dos siguientes*/
+
+    header nav .menu {
+        padding: 0;
+        /*porque no quiero qu el menu tenga paddin, y que este alineado arriva del todo*/
+        /* */
+
+    }
+
+    header nav.container .menu a {
+        padding: 0;
+    }
+
+    en los dos siguentes estamos mejorando el nav para verlo en computadora como se muestra en la web header nav.container .menu {
+        width: 80%;
+        order: 2;
+        /*que se cambien las posiciones*/
+    }
+
+    header nav.container>a {
+        /*solo quiero que el a (hijo directo del container), se le aplique lo de abajo*/
+
+        width: 20%;
+        /*este es el menu vava y le ponemos este porcentaje para que entre%*/
+        order: 1;
+        text-align: right;
+        /*todo lo que esta de texto en ese contenedor se alinea a la derecha*/
+        margin-right: var(--space);
+
+    }
+
+    header nav.container .menu li {
+        text-align: left;
+        display: inline-block;
+    }
+
+    header nav .menu {
+        padding: 0;
+    }
+
+    header nav.container .menu a {
+        padding: 0rem calc(var(--space)*1.25) 0 0;
+    }
+
+
+
+
+}
