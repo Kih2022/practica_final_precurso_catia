@@ -54,6 +54,21 @@ body {
     font-size: 1em;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*inicio del header*/
 
 header {
@@ -105,8 +120,9 @@ header nav.container #btnMenu {
 }
 
 header nav.container .menu {
-    width: 100%;
+    width: 80%;
     /*tenemos que darle medida como todos los otros elememtos*/
+    order: 1;
 }
 
 header nav.container .menu li {
@@ -123,6 +139,8 @@ header nav.container .menu a {
     padding: 0.625rem 0rem;
     /*para separar los botones de la lista*/
     /*sale por defectoi em al cambiarlo, pero luego debemos cambiarlo de nuevo con rems*/
+    text-decoration: none;
+    color: var(--mainColor);
 }
 
 
@@ -135,103 +153,29 @@ header nav.container .menu .active {
 
 /*fin del header*/
 
-/*mediaqueries*/
-/*aqui cambiare,os todo lo que cambie de mobil a la siguiente medida de laptop por ejemplo*/
-
-
-
-@media(width> 48em) {
-    header nav.container #btnMenu {
-        /*cambiarlo siempre de px a rem. mediaquereis siempre en rem*/
-        display: none;
-        /*para que no lo quite y tampoco use el espacio*/
-    }
-
-    header nav.container .menu {
-        width: 80%%;
-        order: 1;
-    }
-
-    header nav.container .menu li {
-        text-align: left;
-        /*parar que desaparezca el menu de la derecha como lo hace al cambiar de dispositivo*/
-        display: inline-block;
-        /*se va hacia abajo porque tiene el width del k50% por eso le ponemos este disblay para que se ponga en linea y se suba arriba.
-         el li es un elemento en bloque, por eso le ponemos el displlay este para que siga siendo un bloque pero se ponga en linea*/
-
-    }
-
-    /*para que los botos logo y el primero de la lista esten alineados como en la foto una vez que cambiamos de vista a desktop, le quitamos todos los paddings. y esto lo muestro en los dos siguientes*/
-
-    header nav .menu {
-        padding: 0;
-        /*porque no quiero qu el menu tenga padding, y que este alineado arriba del todo*/
-        /* */
-
-    }
-
-    header nav.container .menu a {
-        padding: 0rem calc(var(--space) *1.25)0 0
-    }
-}
-
-.hero h1 {
-    max-width: 43.75rem;
-}
-
-
-/*en los dos siguentes estamos mejorando el nav para verlo en computadora como se muestra en la web*/
-header nav.container .menu {
-    width: 80%;
-    order: 2;
-    /*que se cambien las posiciones*/
-}
-
-header nav.container>a {
-    /*solo quiero que el a (hijo directo del container), se le aplique lo de abajo*/
-
-    width: 20%;
-    /*este es el menu vava y le ponemos este porcentaje para que entre%*/
-    order: 1;
-    text-align: right;
-    /*todo lo que esta de texto en ese contenedor se alinea a la derecha*/
-    margin-right: var(--space);
-
-}
-
-header nav.container .menu li {
-    text-align: left;
-    display: inline-block;
-}
-
-header nav .menu {
-    padding: 0;
-}
-
-header nav.container .menu a {
-    padding: 0rem calc(var(--space)*1.25) 0 0;
-}
 
 
 
 
-/*footer*/
 
-/*en el about pagina que tenemos que hacer sera lo mismo que en esta*/
-/*esto mantiene el margen todo el rato, pero a partir de 1400 cambia para que mantenga. hemos hecho estoporque el vava al abrir se pegaba a la derecha al abrir la pantalla*/
+
+/*inicio del footer*/
 
 footer .container {
     padding: 0rem 1.25rem;
     color: var(--secondaryColor);
 }
 
-
-
 /*final del footer*/
 
-/*todos los estilos que no sean desktop o tables, se ponen fuera de las mediaqueries. el moviles. la primera mediaquery es desktop y la segunda tablet*/
 
-/*inicio here*/
+
+
+
+
+
+
+/*inicio hero*/
 .hero {
     background-image: url(../images/fondo.png);
     height: 80vh;
@@ -249,20 +193,32 @@ footer .container {
 
 .hero h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3em;
     line-height: 1.4em;
     /*el interliniado que por defecto es 1 em*/
 }
 
-
-
-
 /*final hero*/
 
-/*inicio projects los estilos genericos de la seccion los hago atacando a section y los particulares los hago atacando a id=project*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*inicio projects*/
+
+
+/*los estilos genericos de la seccion los hago atacando a section y los particulares los hago atacando a id=project*/
 
 main section {
-    pad: var(--space) 1.25rem;
+    padding: (var(--space) *4)1.25rem;
 }
 
 main #projects .grid {
@@ -286,9 +242,9 @@ main #projects .grid article {
 }
 
 main #projects .grid article:first-child {
-    background-image: url(../images/pink.jpg);
+    background-image: url(../images/vase-wooden.jpg);
     background-size: cover;
-    height: 40vh;
+    height: 45vh;
     /*solo le ponemos la altura a uno porque los demas ya la cogen*/
     background-position: center center;
     /*primer elemento sobre la horizontal, segundo elemento sobre la vertical*/
@@ -298,7 +254,7 @@ main #projects .grid article:first-child {
 }
 
 main #projects .grid article:last-child {
-    background-image: url(../images/olga.jpg);
+    background-image: url(../images/coo-coo-clock.png);
     background-size: cover;
     /*esto quiere decir de la fila uno a la 3*/
 }
@@ -307,20 +263,202 @@ main #projects .grid article:nth-child(2) {
     background-image: url(../images/roo.jpg);
     background-size: cover;
     /*esto quiere decir de la fila uno a la 3*/
+    background-position: center center;
+    overflow: hidden;
+    /*mascara de recorte*/
 }
 
+main #projects .grid article {
+    position: relative;
+}
+
+main #projects .grid article h3 {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 0.60rem;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: 1s;
+    opacity: 0;
+}
+
+main #projects .grid article:hover h3 {
+    left: 1.25rem;
+    opacity: 1;
+}
+
+main section h2 {
+    font-size: 3em;
+    padding-bottom: 2.5rem;
+    text-align: center;
+}
+
+main .more a {
+    color: var(--secondaryColor);
+    display: inline-block;
+    padding: 0.20rem 0rem;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-top: calc(var(--space)*3);
+    border-bottom: 1px solid var(--secondaryColor);
+}
+
+/* fin projects */
 
 
 
-@media(width> 87.5rem) {
-    header .container {
-        padding: 0;
-    }
 
-    footer .container {
-        padding: 0;
+
+
+
+
+
+
+
+
+/* inicio our expertise */
+
+main #ourexpertise .flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+}
+
+main #ourexpertise article {
+    text-align: center;
+}
+
+main #ourexpertise article figure {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+main #ourexpertise article h3 {
+    font-size: 2rem;
+    padding: var(--space) 0;
+}
+
+main #ourexpertise article p {
+    color: var(--secondaryColor);
+    font-size: 1.25em;
+}
+
+/* fin our expertise */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* inicio de price */
+
+main #price .flex {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--space)*2);
+}
+
+main #price .flex article {
+    text-align: center;
+}
+
+main #price .flex article h3 {
+    font-size: 2em;
+}
+
+main #price .flex article .price {
+    font-size: 3em;
+    margin: var(--space) 0;
+}
+
+main #price .flex article hr {
+    border: 0.5px solid var(--secondaryColor);
+    margin-bottom: var(--space);
+}
+
+main #price .flex article li {
+    margin-bottom: 0.625rem;
+    font-size: 1.5rem;
+
+    & span {
+        color: var(--secondaryColor);
     }
 }
+
+.buy {
+    background-color: var(--colorButton);
+    display: inline-block;
+    padding: var(--space);
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--mainColor);
+    transition: 0.5s;
+
+    &:hover {
+        background-color: var(--secondaryColor);
+    }
+}
+
+/* final de price */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* inicio de news */
+
+main #news .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space);
+}
+
+main #news .flex article a {
+    display: block;
+    text-decoration: none;
+    color: var(--mainColor);
+}
+
+main #news .flex article a p {
+    color: var(--secondaryColor)
+}
+
+main #news .flex article a h3 {
+    font-size: 2rem;
+}
+
+/* final de news */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mediaqueries */
 
 @media(min-width: 48rem) {
     header nav.container #btnMenu {
@@ -329,6 +467,7 @@ main #projects .grid article:nth-child(2) {
 
     header nav.container .menu {
         width: 80%;
+
         order: 1;
     }
 
@@ -366,26 +505,49 @@ main #projects .grid article:nth-child(2) {
         grid-row: 1/3;
     }
 
+    main #ourexpertise .flex {
+        flex-direction: row;
+    }
+
+    main #ourexpertise article {
+        text-align: left;
+    }
+
+    main #ourexpertise article figure {
+        max-width: 100px;
+        margin: 0;
+    }
+
+    main #price .flex {
+        flex-direction: row;
+    }
+
+    main #price .flex article {
+        width: 100%;
+        text-align: left;
+    }
+
+    main section h2 {
+        text-align: left;
+    }
+
+    main #news article {
+        width: calc(50% - var(--space));
+    }
+
+    main #news article figure {
+        max-height: 200px;
+        overflow: hidden;
+    }
+
 }
 
-main #projects .grid article h3 {
-    position: absolute;
-    bottom: 1.25rem;
-    left: 1rem;
-    font-size: 2em;
-    font-weight: 500;
-    transform: 1s;
-
+@media(min-width: 1000px) {
+    main #news article figure {
+        max-height: 280px;
+        overflow: hidden;
+    }
 }
-
-
-main section h2 {
-
-    font-size: 3em;
-    padding-bottom: 2.5em;
-}
-
-
 
 @media(min-width: 87.5rem) {
     header .container {
@@ -394,5 +556,10 @@ main section h2 {
 
     footer .container {
         padding: 0;
+    }
+
+    main #news article figure {
+        max-height: 400px;
+        overflow: hidden;
     }
 }
