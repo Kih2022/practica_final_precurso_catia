@@ -80,9 +80,9 @@ header .container {
     justify-content: space-between;
     flex-wrap: wrap;
     /*decirle al sistema flexible que yo puedo elegir el tamano de los elemento*/
-    font-size: 1.75m;
+    font-size: 1.75rem;
     /*lo mismo que 175%*/
-    padding: 0em 1.25em;
+    padding: 0rem 1.25rem;
     /*padding solo por arriba y por abajo para que el vava (que se estaba empujando a la izquierda) se separe. lo convertimos a em*/
 
 
@@ -205,17 +205,35 @@ header nav.container .menu .active {
     }
 }
 
-@media(width> 87.5rem) {
+footer .container {
+    padding: 0rem 1.25rem;
+    color: var(--secondaryColor);
+}
 
 
 
 
 
-    /*footer*/
 
-    /*en el about pagina que tenemos que hacer sera lo mismo que en esta*/
-    /*esto mantiene el margen todo el rato, pero a partir de 1400 cambia para que mantenga. hemos hecho estoporque el vava al abrir se pegaba a la derecha al abrir la pantalla*/
-    header .container {
+
+/*footer*/
+
+/*en el about pagina que tenemos que hacer sera lo mismo que en esta*/
+/*esto mantiene el margen todo el rato, pero a partir de 1400 cambia para que mantenga. hemos hecho estoporque el vava al abrir se pegaba a la derecha al abrir la pantalla*/
+
+
+
+
+
+
+
+/*final del footer*/
+@media(width> 87.5em) {
+    header .containeer {
+        padding: 0rem;
+    }
+
+    footer .container {
         padding: 0em;
     }
 }
