@@ -40,7 +40,7 @@ img:hover {
 
 .container {
     max-width: var(--maxWidth);
-    /*tiene un ancho la pagina general la pagina y por eso le ponemos esto*/
+    /*tiene un ancho la pagina general y por eso le ponemos esto*/
     margin: 0 auto;
     /*para centrarlo en la pagina*/
 }
@@ -53,6 +53,208 @@ body {
     color: var(--mainColor);
     font-size: 1em;
 }
+
+
+
+
+
+
+
+/*INICIO MAIN*/
+
+#meettheteam {
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+
+
+}
+
+#meettheteam h2 {
+    text-align: left;
+}
+
+main #meettheteam .flex {
+    justify-items: center;
+    align-items: center;
+    /*display: grid;
+    grid-template-columns: repeat(4, 25%);
+
+    gap: var(--space);*/
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--space);
+
+}
+
+main #meettheteam article {
+    /*text-align: center;*/
+    /*margin: 1.25rem;
+    max-width: var(--maxWidth);*/
+
+    justify-items: center;
+    align-items: center;
+
+    filter: grayscale(100%);
+    transition: 1s;
+
+    &:hover {
+        filter: grayscale(0);
+    }
+}
+
+
+
+main #meettheteam article figure {
+    /*max-width: var(--maxWidth);
+    margin: o auto;*/
+
+    transform: rotate(45deg);
+    overflow: hidden;
+    transition: 1sec;
+
+
+
+
+    /*font-size: 2rem;
+    padding: var(--space);*/
+}
+
+#meettheteam figure img {
+
+    transform: rotate(-45deg);
+
+    overflow: hidden;
+    /*width: 100%;
+    height: auto;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+main #meettheteam .pie {
+    text-align: center;
+    background-color: #f4f4f4f4;
+    padding: 6.25rem;
+
+}
+
+main #meettheteam .pie article p {
+    color: var(--secondaryColor);
+    font-size: 1.75rem;
+    text-decoration: none;
+}
+
+main #meettheteam .pie article p a {
+    text-decoration: none;
+}
+
+
+
+
+
+/* -------------------------------*/
+
+#ourexpertise2 {
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+
+main #ourexpertise2 .flex2 {
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+    flex-direction: column;
+
+}
+
+main #ourexpertise2 article {
+    text-align: center;
+
+}
+
+main #ourexpertise2 article figure {
+    max-width: 100px;
+    margin: 0 auto;
+
+}
+
+main #ourexpertise2 article h3 {
+    font-size: 2rem;
+    padding: var(--space) 0;
+
+}
+
+main #ourexpertise .pie {
+    filter: grayscale(0);
+    padding: 0rem 1.25rem;
+
+}
+
+
+main #ourexpertise .pie article h3 {
+    color: var(--secondaryColor);
+    font-size: 1.25rem;
+}
+
+
+/*-----------------------------*/
+
+#thewaywework {
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+
+#thewaywework h3 {
+    text-align: center;
+    font-size: 2rem;
+    padding: var(--space) 0;
+}
+
+#thewaywework nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: var(--space) 0;
+}
+
+#thewaywework nav ul li a {
+    text-decoration: none;
+    color: var(--mainColor);
+
+
+}
+
+#thewaywework nav ul li a hr {
+    line-break: var(--space);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -86,6 +288,7 @@ header {
 header nav .menu {
     padding: calc(var(--space) * 2) 0;
     /*ixq dcha arriba y abajo. calculo la variable espacio que queria y la multiplico por dos para doblar el espacio. el 0 es de arriba y abajo*/
+
 
 }
 
@@ -218,7 +421,7 @@ footer .container {
 /*los estilos genericos de la seccion los hago atacando a section y los particulares los hago atacando a id=project*/
 
 main section {
-    padding: (var(--space) *4)1.25rem;
+    padding: calc(var(--space) *4)1.25rem;
 }
 
 main #projects .grid {
@@ -540,26 +743,70 @@ main #news .flex article a h3 {
         overflow: hidden;
     }
 
-}
+    main #meettheteam .flex1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
 
-@media(min-width: 1000px) {
-    main #news article figure {
-        max-height: 280px;
-        overflow: hidden;
-    }
-}
 
-@media(min-width: 87.5rem) {
-    header .container {
-        padding: 0;
     }
 
-    footer .container {
-        padding: 0;
+
+    main #ourexpertise2 .flex2 {
+        flex-direction: row;
+        gap: var(--space);
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    main #news article figure {
-        max-height: 400px;
-        overflow: hidden;
+    main #ourexpertise2 article {
+        text-align: left;
+    }
+
+    main #ourexpertise2 article figure {
+        max-width: 100px;
+        margin: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media(min-width: 1000px) {
+        main #news article figure {
+            max-height: 280px;
+            overflow: hidden;
+        }
+    }
+
+    @media(min-width: 87.5rem) {
+        header .container {
+            padding: 0;
+        }
+
+        footer .container {
+            padding: 0;
+        }
+
+        main #news article figure {
+            max-height: 400px;
+            overflow: hidden;
+        }
     }
 }
